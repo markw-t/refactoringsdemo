@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{72C138E3-2C54-4B96-8EC0-C1B0D1813673}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BluePencilDemo</RootNamespace>
-    <AssemblyName>BluePencilDemo</AssemblyName>
+    <RootNamespace>RefactoringsDemo</RootNamespace>
+    <AssemblyName>RefactoringsDemo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
