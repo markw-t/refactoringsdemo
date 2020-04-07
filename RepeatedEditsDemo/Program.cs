@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static Refactorings.TemperatureConversions;
 
 namespace Refactorings
@@ -16,16 +14,16 @@ namespace Refactorings
 
             foreach (string s in args)
             {
-                if(s!=null)
+                if (s != null)
                 {
-                    if(s.Length>0 && s.Substring(s.Length -1).Equals("F"))
+                    if (s.Length > 0 && s.Substring(s.Length - 1).Equals("F"))
                     {
                         string tempFString = s.Substring(0, s.Length - 1);
                         double tempF = System.Convert.ToDouble(tempFString);
                         fTemps.Add(tempF);
 
-                        Console.WriteLine((tempF -32) * (5.0/9.0));
-                        
+                        Console.WriteLine((tempF - 32) * (5.0 / 9.0));
+
                     }
                     if (s.Length > 0 && s.Substring(s.Length - 1).Equals("C"))
                     {
@@ -33,7 +31,7 @@ namespace Refactorings
                         double tempC = System.Convert.ToDouble(tempCString);
                         cTemps.Add(tempC);
 
-                        Console.WriteLine((tempC * (9.0 / 5.0) + 32));
+                        Console.WriteLine(tempC * (9.0 / 5.0) + 32);
                     }
                 }
                 if (fTemps.Count != 0)
@@ -42,14 +40,14 @@ namespace Refactorings
                     Console.WriteLine(MaxTempInC(fTemps));
                     Console.WriteLine(AveFTempInC(fTemps));
                 }
-                if (cTemps.Count !=0)
+                if (cTemps.Count != 0)
                 {
                     Console.WriteLine(MinTempInF(cTemps));
                     Console.WriteLine(MaxTempInF(cTemps));
                     Console.WriteLine(AveCTempInF(cTemps));
                 }
 
-                Console.WriteLine(AllTheCelsiusFormulae(20, 30, 40, 50,60,70));
+                Console.WriteLine(AllTheCelsiusFormulae(20, 30, 40, 50, 60, 70));
             }
             Console.ReadKey();
         }
@@ -58,15 +56,15 @@ namespace Refactorings
         {
             double fMin = fTemps.ElementAt<double>(0);
 
-            foreach(double f in fTemps)
+            foreach (double f in fTemps)
             {
-                if(f < fMin)
+                if (f < fMin)
                 {
-                    fMin = f; 
+                    fMin = f;
                 }
             }
 
-            return ((fMin -32) * (5.0/9.0));
+            return (fMin - 32) * (5.0 / 9.0);
         }
         private static double MinTempInF(List<double> cTemps)
         {
@@ -80,7 +78,7 @@ namespace Refactorings
                 }
             }
 
-            return ((cMin * 9.0/5.0) +32);
+            return (cMin * 9.0 / 5.0) + 32;
         }
 
         static double MaxTempInC(List<double> fTemps)
@@ -109,13 +107,13 @@ namespace Refactorings
                 }
             }
 
-            return ((cMax*9.0/5.0) + 32);
+            return (cMax * 9.0 / 5.0) + 32;
         }
 
         static double AveFTempInC(List<double> fTemps)
         {
             double fTot = 0;
-            double fAve ;
+            double fAve;
 
             foreach (double f in fTemps)
             {
@@ -137,14 +135,12 @@ namespace Refactorings
             }
             cAve = cTot / cTemps.Count;
 
-            return (cAve * (9.0 / 5.0) + 32);
-
+            return cAve * (9.0 / 5.0) + 32;
         }
 
         static double AllTheCelsiusFormulae(double CName1, double Celsius, double Centigrade, double DegC, double DegreesC, double DC)
         {
             //test method
-
             Console.WriteLine(CName1 * (9.0 / 5.0) + 32);
             Console.WriteLine(DegreesC * (9.0 / 5.0) + 32);
             Console.WriteLine(DC * (9.0 / 5.0) + 32);
@@ -155,6 +151,5 @@ namespace Refactorings
 
             return CName1;
         }
-
     }
 }
