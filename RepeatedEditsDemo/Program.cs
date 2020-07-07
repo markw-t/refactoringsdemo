@@ -65,7 +65,7 @@ namespace Refactorings
                     fMin = f;
                 }
             }
-            //TASK 2 Start: get rid of the hardcoded Fahrenheit to Celsius conversion and use FtoC function instead, throughout this file.
+            //TASK 2 Start: Change the hardcoded Fahrenheit to Celsius conversion and use FtoC function instead, throughout this file.
             return (fMin - 32) * (5.0 / 9.0);
         }
         private static double MinTempInF(List<double> cTemps)
