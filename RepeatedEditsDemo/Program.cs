@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using static Refactorings.TemperatureConversions;
 
 namespace Refactorings
@@ -136,6 +137,31 @@ namespace Refactorings
             cAve = cTot / cTemps.Count;
 
             return cAve * (9.0 / 5.0) + 32;
+        }
+
+        static double SumTempsInC(List<double> fTemps)
+        {
+            double fTotal = 0;
+            foreach(double f in fTemps)
+            {
+                fTotal += f;
+            }
+            return (fTotal - 32) * (5.0 / 9.0);
+        }
+
+        static string ListTempsInC(List<double> fTemps)
+        {
+            StringBuilder cList = new StringBuilder();
+            double fItem;
+            
+            foreach(double f in fTemps)
+            {
+                fItem = (f - 32) * (5.0 / 9.0);
+                cList.Append(fItem.ToString());
+                cList.Append(',');
+            }
+
+            return cList.ToString();
         }
 
         static double AllTheCelsiusFormulae(double CName1, double Celsius, double Centigrade, double DegC, double DegreesC, double DC)
