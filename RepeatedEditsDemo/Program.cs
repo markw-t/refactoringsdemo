@@ -40,7 +40,8 @@ namespace Refactorings
                     Console.WriteLine(MinTempInC(fTemps));
                     Console.WriteLine(MaxTempInC(fTemps));
                     //TASK 1: write the result of AveTempInC to the console
-                    
+                    //THINK OUT LOUD, tell us what you are doing on the keyboard and mouse, and what you're seeing
+                  
                 }
                 if (cTemps.Count != 0)
                 {
