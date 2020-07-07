@@ -39,7 +39,8 @@ namespace Refactorings
                 {
                     Console.WriteLine(MinTempInC(fTemps));
                     Console.WriteLine(MaxTempInC(fTemps));
-                    Console.WriteLine(AveFTempInC(fTemps));
+                    //TASK 1: write the result of AveTempInC to the console
+                    
                 }
                 if (cTemps.Count != 0)
                 {
@@ -64,7 +65,7 @@ namespace Refactorings
                     fMin = f;
                 }
             }
-
+            //TASK 2 Start: get rid of the hardcoded Fahrenheit to Celsius conversion and use FtoC function instead, throughout this file.
             return (fMin - 32) * (5.0 / 9.0);
         }
         private static double MinTempInF(List<double> cTemps)
