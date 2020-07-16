@@ -40,11 +40,13 @@ namespace Refactorings
                     Console.WriteLine(MinTempInC(fTemps));
                     Console.WriteLine(MaxTempInC(fTemps));
                     //TASK 1: 
-                    //Write the result of AveFTempInC() method on the list of fTemps to the console
-                    //Follow the same pattern as in the lines of code above this comment
-                    //THINK OUT LOUD, 
+                    //On line 49 below
+                    //write the result of AveFTempInC() method operating on the list of fTemps, to the console
+                    //Follow the same pattern as in the lines of code above this comment (40,41)
+                    //PLEASE THINK OUT LOUD, 
                     //Tell us what you are doing on the keyboard and mouse, and what you're seeing onscreen
-
+                    //Is what you are seeing helping/hindering you in your task?
+                    
                 }
                 if (cTemps.Count != 0)
                 {
